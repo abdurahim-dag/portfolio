@@ -11,5 +11,5 @@
 Учебные проекты
 | #    | Наименование проекта                | Описание                                                     | Стек                                                         |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1.   | [Дипломный DE Практикум](https://github.com/abdurahim-dag/de-project-final) | Собор данных по транзакционной активности пользователей | python, aifrflow, spark structured streaming, postgres, kafka, vertica  |
+| 1.   | [Дипломный DE Практикум](https://github.com/abdurahim-dag/de-project-final) | Собор данных по транзакционной активности пользователей | python, aifrflow, spark structured streaming, postgres, kafka, vertica, yandex cloud  |
 | 2.   | [Дипломный DE 1t Sprint](https://github.com/abdurahim-dag/selenium_avito) | Формирование витрин данных для анализа изменений курса акций | python, airflow, postgres, metabase |
