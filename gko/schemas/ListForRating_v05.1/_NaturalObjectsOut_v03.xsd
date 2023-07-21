@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!--Все простые типы данных-->
+	<xs:include schemaLocation="P_AllSimpleType_v03.xsd"/>
+	<!--Справочник "Природные объекты"-->
+	<xs:include schemaLocation="dNaturalObjects_v01.xsd"/>
+	<!--Справочник "Целевое назначение лесов"-->
+	<xs:include schemaLocation="dForestUse_v01.xsd"/>
+	<!--Категории защитных лесов-->
+	<xs:include schemaLocation="dForestCategoryProtective_v01.xsd"/>
+	<xs:include schemaLocation="dWaterObjectType_v01.xsd"/>
+	<!--СВЕДЕНИЯ О ПРИРОДНЫХ ОБЪЕКТАХ:-->
+	<!--Версия 03-->
+	<xs:complexType name="tNaturalObjects">
+		<xs:annotation>
+			<xs:documentation>Сведения о природных объектах</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NaturalObject" type="tNaturalObject" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Природный объект</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tNaturalObject">
+		<xs:annotation>
+			<xs:documentation>Сведения о природном объекте</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Kind" type="dNaturalObjects">
+				<xs:annotation>
+					<xs:documentation>Вид объекта</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Forestry" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование лесничества, участкового лесничества</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ForestUse" type="dForestUse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Целевое назначение (категория) лесов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="QuarterNumbers" type="tQuarterNumbers" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номера лесных кварталов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProtectiveForest" type="dForestCategoryProtective" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Категория защитных лесов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WaterObject" type="dWaterObjectType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид водного объекта</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WaterName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование водного объекта</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NameOther" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование иного природного объекта</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CharOther" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Характеристика иного природного объекта (назначение)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tQuarterNumbers">
+		<xs:annotation>
+			<xs:documentation>Номера лесных кварталов</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="QuarterNumber" type="xs:string" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Номер лесного квартала</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

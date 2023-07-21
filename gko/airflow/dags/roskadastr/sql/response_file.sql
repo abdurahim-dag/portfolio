@@ -1,0 +1,2 @@
+insert into gko.response_file(response_file_name, response_file_path, response_id, response_file_type, response_file_description, response_file_content)
+    VALUES (%(file_name)s, %(path)s, %(response_id)s, %(file_type)s, %(descr)s, %(content)s);

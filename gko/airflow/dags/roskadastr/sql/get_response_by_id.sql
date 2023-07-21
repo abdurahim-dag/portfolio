@@ -1,0 +1,1 @@
+select response_id from gko.response where response_id>%(response_id)s

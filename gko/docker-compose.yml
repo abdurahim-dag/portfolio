@@ -1,0 +1,30 @@
+version: '3'
+services:
+
+  db-gko:
+    container_name: db-gko
+    build: db
+    environment:
+      POSTGRES_DB: gko
+      POSTGRES_USER: gko
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_HOST_AUTH_METHOD: md5
+    hostname: db-gko
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+    ports:
+      - 55432:5432
+    volumes:
+      - gko-db-volume:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  metabase:
+    image: metabase/metabase
+    ports:
+      - 3333:3000
+    restart: unless-stopped
+
+volumes:
+  gko-db-volume:

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--Все простые типы данных-->
+	<xs:include schemaLocation="P_CommonSimpleTypeAll_v01.xsd"/>
+	<!--СВЕДЕНИЯ О КАДАСТРОВОЙ СТОИМОСТИ:-->
+	<xs:complexType name="tCadastralCost">
+		<xs:annotation>
+			<xs:documentation>Значение кадастровой стоимости</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Value" type="d20_2" use="required">
+			<xs:annotation>
+				<xs:documentation>Значение</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Unit" use="required" fixed="383">
+			<xs:annotation>
+				<xs:documentation>Единица измерения-рубль</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="tCadastralCostExt">
+		<xs:annotation>
+			<xs:documentation>Кадастровая стоимость, реквизиты акта и даты</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="tCadastralCost">
+				<xs:sequence>
+					<xs:element name="DateValuation" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Дата определения кадастровой стоимости</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DateEntering" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Дата внесения сведений о кадастровой стоимости в ЕГРН</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DateApproval" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Дата утверждения кадастровой стоимости</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DocNumber" type="s45" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Номер акта об утверждении кадастровой стоимости</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DocDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Дата акта об утверждении кадастровой стоимости</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ApplicationDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Дата начала применения кадастровой стоимости</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RevisalStatementDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Дата подачи заявления о пересмотре кадастровой стоимости</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ApplicationLastDate" type="xs:date" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>В соответствии с Федеральным законом от 3 июля 2016 г. N 360-ФЗ "О внесении изменений в отдельные законодательные акты Российской Федерации" применяется с</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="DocName" type="s500" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Наименование документа об утверждении кадастровой стоимости</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

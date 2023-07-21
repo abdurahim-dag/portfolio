@@ -1,0 +1,9 @@
+apache-airflow-providers-samba==4.1.0
+exchangelib==4.9.0
+psycopg==3.1.8
+pydantic==1.10.6
+openpyxl==3.1.1
+xmltodict==0.13.0
+odfpy==1.4.1
+xlsxwriter==3.0.8
+paramiko==3.2.0

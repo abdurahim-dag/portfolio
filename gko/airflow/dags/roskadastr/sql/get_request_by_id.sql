@@ -1,0 +1,1 @@
+select request_id from gko.request where request_id=%(id)s

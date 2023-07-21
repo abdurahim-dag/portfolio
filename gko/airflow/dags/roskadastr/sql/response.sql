@@ -1,0 +1,2 @@
+insert into gko.response(response_date, response_reg_num, response_type_id, response_name, response_description, response_pdf)
+VALUES (%(date)s, %(reg_num)s, %(type_id)s, %(name)s, %(descr)s, %(pdf)s) RETURNING response_id;

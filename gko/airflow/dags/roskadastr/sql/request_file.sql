@@ -1,0 +1,2 @@
+insert into gko.request_file(request_file_name, request_file_path, request_id, request_file_options, request_file_description, request_file_content)
+    VALUES (%(file_name)s, %(path)s, %(req_id)s, %(options)s, %(descr)s, %(content)s);

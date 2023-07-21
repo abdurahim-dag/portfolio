@@ -1,0 +1,8 @@
+{
+  "SMB_DAYS": "/public/Управление информационных технологий/Отдел разработки программного обеспечения/ежедневка_2023",
+  "SMB_OUT": "/ocenka/2023/Росреестр_Исходящие",
+  "SMB_CODES": "/ocenka/2023/database/Analis",
+  "DATA_DIR": "/data",
+  "SQL_DIR": "/opt/airflow/dags/roskadastr/sql",
+  "EMAIL_EXPORT": "SwapGKO@dagbti.ru"
+}

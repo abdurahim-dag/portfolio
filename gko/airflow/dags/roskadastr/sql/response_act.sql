@@ -1,0 +1,2 @@
+insert into gko.response_act(response_act_ods_filename, response_act_count_ok, response_act_count_bad, response_id, response_act_ods)
+    VALUES (%(file_name)s, %(count_ok)s, %(count_bad)s, %(response_id)s, %(pdf)s);
