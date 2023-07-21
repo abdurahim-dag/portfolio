@@ -12,8 +12,8 @@
 
 | #    | Наименование проекта                               | Описание                                                     | Стек                                                         |
 | ---- |----------------------------------------------------| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1.   | [Дипломный DE Практикум]("./transactional activity/README.md") | Собор данных по транзакционной активности пользователей | python, aifrflow, spark structured streaming, postgres, kafka, vertica, yandex cloud  |
-| 2.   | [Дипломный DE 1t Sprint](./exchange rate/README.md)                       | Формирование витрин данных для анализа изменений курса акций | python, airflow, postgres, metabase |
+| 1.   | [Дипломный DE Практикум](./transactional&#32;activity/README.md) | Собор данных по транзакционной активности пользователей | python, aifrflow, spark structured streaming, postgres, kafka, vertica, yandex cloud  |
+| 2.   | [Дипломный DE 1t Sprint](./exchange&#32;rate/README.md)                       | Формирование витрин данных для анализа изменений курса акций | python, airflow, postgres, metabase |
 
 
 #### Контакты: [email](mailto:mail@iragim.ru) | [telegram](https://t.me/abdurahim_dag)
